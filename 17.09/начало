@@ -1,0 +1,13 @@
+s='привет'
+i=193
+b=True
+print(type(s))
+print(type(i))
+print(type(b))
+#s=int(s)
+i=str(i)
+b=int(b)
+print(type(s))
+print(type(i))
+print(type(b))
+print(b)
