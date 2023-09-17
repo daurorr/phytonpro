@@ -1,0 +1,12 @@
+num1=input("сколько ты добавил?")
+num2=input("сколько ты добавил?")
+num3=input("сколько ты добавил?")
+num4='15000'
+num1=int(num1)
+num2=int(num2)
+num3=int(num3)
+num4=int(num4)
+num5=num1+num2+num3
+print("нехватает:", num4-num5)
+
+
