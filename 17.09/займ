@@ -1,0 +1,7 @@
+num1=input("сколько у тебя денег?")
+num2=input("сколько ты должен тренеру?")
+num3=input("сколько ты должен другу?")
+num3=int(num3)
+num2=int(num2)
+num1=int(num1)
+print("у тебя осталось:" num1-num2-num3)
