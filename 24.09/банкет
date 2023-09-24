@@ -1,0 +1,17 @@
+num1=input("сколько у тебя денег?")
+num2=input("сколько у тебя денег?")
+num3=input("сколько у тебя денег?")
+num4=input("cколько у тебя денег?")
+num1=int(num1)
+num2=int(num2)
+num3=int(num3)
+num4=int(num4)
+num5=input("сколько тысяч стоит аренда?")
+num5=int(num5)
+num6=num1+num2+num3+num4
+num7="1000"
+num7=int(num7)
+num8=num5*num7
+num9=num6-num8
+num9=float(num9)
+print(num9/num7)
