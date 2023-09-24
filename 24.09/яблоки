@@ -1,0 +1,10 @@
+num1=input("количество школьников:")
+num2=input("количество яблок:")
+num1=int(num1)
+num2=int(num2)
+num3=num2//num1
+num3=int(num3)
+num4=num1-num2
+print("у каждого по:", num3)
+print("остаток:", num2-num1)
+
