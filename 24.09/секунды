@@ -1,0 +1,14 @@
+num1=input("за сколько секунд пробежал первый участник?")
+num2=input("за сколько секунд пробежал второй участник?")
+num3=input("за сколько секунд пробежал третий участник?")
+num1=float(num1)
+num2=float(num2)
+num3=float(num3)
+num4=num1+num2+num3
+num5=int(num4)//int("1")
+num6=num4-num5
+print(num5, "минут", end="")
+num7=num6*int("60")
+num7//int("1")
+print(num7//int("1"))
+
