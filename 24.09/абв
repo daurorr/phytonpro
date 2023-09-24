@@ -1,0 +1,7 @@
+num1=input("a=")
+num2=input("b=")
+num3=input("c=")
+num1=int(num1)
+num2=int(num2)
+num3=int(num3)
+print(num1*int("2")+num2*int("3")-num3*int("4"))
