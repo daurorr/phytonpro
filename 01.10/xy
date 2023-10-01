@@ -1,0 +1,5 @@
+num1=input("y=")
+num2=input("x=")
+num1=int(num1)
+num2=int(num2)
+print(3*(num2**2)+2*num2*num1-6*(num1**2))
