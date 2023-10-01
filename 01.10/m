@@ -1,0 +1,5 @@
+s=float(input())
+n=float(input())
+p=float(input())
+r=float(p/100)
+print("m=", (s*r*(1+r)*n)/(12*((1+r)*n-1)))
