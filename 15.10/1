@@ -1,0 +1,6 @@
+import pyautogui as p
+p.moveTo(331,748)
+p.click()
+import keyboard
+keyboard.write("hfpevty kb z?")
+p.press('enter')
