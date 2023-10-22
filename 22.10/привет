@@ -1,0 +1,4 @@
+import pyautogui as p
+a=str(input('имя:'))
+b=str(input('фамилия:'))
+p.alert(text="здравствуйте, "+a +b , button='привет')
