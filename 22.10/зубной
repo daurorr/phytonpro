@@ -1,0 +1,13 @@
+import pyautogui as p
+import keyboard
+p.moveTo(557,753)
+p.click()
+keyboard.write("Zubnoj v 8:00")
+p.moveTo(1323,71)
+p.click()
+p.moveTo(557,387)
+p.click()
+p.moveTo(497,482)
+keyboard.write("124134yu")
+p.moveTo(847,551)
+p.click()
