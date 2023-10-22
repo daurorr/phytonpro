@@ -1,0 +1,22 @@
+import pyautogui as p
+import time
+import keyboard
+p.moveTo(1252,16)
+p.click()
+p.moveTo(158,27)
+p.doubleClick()
+time.sleep(1)
+p.hotkey('ctrl', 'a')
+time.sleep(1)
+p.hotkey('ctrl', 'c')
+p.moveTo(1330,60)
+p.click()
+p.moveTo(1167,148)
+p.doubleClick()
+time.sleep(1)
+p.click()
+p.hotkey('ctrl', 'v')
+p.moveTo(1323,71)
+p.click()
+p.moveTo(557,387)
+p.click()
