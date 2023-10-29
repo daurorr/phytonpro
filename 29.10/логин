@@ -1,0 +1,11 @@
+import pyautogui as p
+a=input("логин")
+b=input("пароль")
+if (a!='123456'):
+    p.alert(text="логин не верный", button='ok')
+if (b!='123456'):
+    p.alert(text="пароль не верный", button='ok')
+if (a, b!='123456'):
+    p.alert(text="логин и пароль не верный", button='ok')
+if (a, b=='123456'):
+    p.moveTo(22, 345)
