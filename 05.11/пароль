@@ -1,0 +1,15 @@
+import pyautogui as p
+a='abcd'
+b='1234'
+v=input("логин")
+n=input('пароль')
+if (v!=a):
+    p.alert(text="логин не верный", button='ok')
+if (n!=b):
+    p.alert(text="пароль не верный", button='ok')
+if (v, n==a, b):
+    p.moveTo(1761,11)
+    p.click()
+    p.moveTo(338,798)
+    p.doubleClick()
+    
