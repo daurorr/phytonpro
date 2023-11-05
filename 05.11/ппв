@@ -1,0 +1,16 @@
+import pyautogui as p
+import keyboard as k
+v=int(input('влажность'))
+t=int(input('температура'))
+if (v>60) or (t<10) or (v<30) or (t>30):
+    print("тревога!")
+    p.moveTo(1761,11)
+    p.click()
+    p.moveTo(281,61)
+    p.click()
+    k.write("что делать при нарушении условий в оранжерее")
+    p.press('enter')
+if (v<60) or (t>10) or (v>30) or (t<30):
+    print("все нормально")
+    
+    
