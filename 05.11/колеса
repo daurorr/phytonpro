@@ -1,0 +1,8 @@
+a=int(input('1 колесо'))
+b=int(input('2 колесо'))
+c=int(input('3 колесо'))
+d=int(input('4 колесо'))
+if (a>6) or (b>6) or (c>6) or (d>6):
+      print('Замени от греха подальше')
+if (a<6) or (b<6) or (c<6) or (d<6):
+      print('Всё хорошо, ехаем')
