@@ -1,0 +1,13 @@
+x=int(input("логин: "))
+y=int(input("пароль: "))
+q=654321
+w=123456
+while((x!=q) and (y!=w)) or ((x!=q) and (y==w)):
+    print("логин не верный")
+    x=int(input("логин: "))
+    y=int(input("пароль: "))
+while (y!=w):
+    y=int(input("пароль не верный: "))
+if (x==q) and (y==w):
+    print("")
+print("успешный вход")
