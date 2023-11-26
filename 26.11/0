@@ -1,0 +1,7 @@
+y=123456
+x=int(input("пароль: "))
+while(y!=x):
+    print("пароль не верный")
+    x=int(input())
+if (y==x):
+    print("верно")
