@@ -1,0 +1,7 @@
+w='конец'
+y=input()
+t=""
+while (y!=w):
+    t=t+y+
+    y=input()
+print(t)
