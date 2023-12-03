@@ -1,0 +1,31 @@
+x=input("введите операцию")
+y='стоп'
+w="+"
+e="-"
+r="*"
+t="/"
+while (x!=y):
+    if (x==w):
+        u=int(input("первое слагаемое: "))
+        i=int(input("второе слагаемое: "))
+        print(u+i)
+        x=input("введите операцию")
+    if (x==e):
+        u=int(input("уменьшаемое: "))
+        i=int(input("вычитаемое: "))
+        print(u-i)
+        x=input("введите операцию")
+    if (x==r):
+        u=int(input("первый множитель: "))
+        i=int(input("второй множитель: "))
+        print(u*i)
+        x=input("введите операцию")
+    if (x==t):
+        u=int(input("делимое: "))
+        i=int(input("делитель: "))
+        print(u/i)
+        x=input("введите операцию")
+    else:
+        print('нету команды')
+        x=input('введите операцию')
+print('до свидания')
