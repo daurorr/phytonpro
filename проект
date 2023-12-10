@@ -1,0 +1,33 @@
+import pyautogui as p
+YesOrNo=input('хотите начать игру?: ')
+if (YesOrNo=="да"):
+    from random import randint
+    x=randint(1, 100)
+    popitki=0
+    print("угадай число от 1 до 100 :)")
+    while True:
+        num=int(input("ваше число: "))
+        popitki=popitki+1
+        if (popitki>=8):
+            p.alert(text="вы проиграли :(!", title="поражение", button="о нет :(")
+            break
+            if (otziv=="да"):
+                print('я старалась')
+            elif (otziv=="нет"):
+                input("ичо")
+        if (num==x):
+            p.alert(text="ура, вы угадали число!", title="победа", button="я гений :)")
+            otziv=input("вам понравилась игра?")
+            break
+            if (otziv=="да"):
+                print('я старалась')
+            elif (otziv=="нет"):
+                input("ичо")
+        elif (num>x):
+            print("число меньше")
+        elif (num<x):
+            print("число больше")
+elif (YesOrNo=="нет"):
+    print("ну ладно, увидимся позже...")
+else:
+    p.alert(text="неизвестная команда", button="попробовать снова")
