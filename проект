@@ -1,5 +1,7 @@
 import pyautogui as p
 YesOrNo=input('хотите начать игру?: ')
+yes="да"
+no="нет"
 if (YesOrNo=="да"):
     from random import randint
     x=randint(1, 100)
@@ -8,26 +10,83 @@ if (YesOrNo=="да"):
     while True:
         num=int(input("ваше число: "))
         popitki=popitki+1
-        if (popitki>=8):
+        if (popitki>=9):
             p.alert(text="вы проиграли :(!", title="поражение", button="о нет :(")
-            break
+            otziv=input("вам понравилась игра?")
             if (otziv=="да"):
                 print('я старалась')
             elif (otziv=="нет"):
-                input("ичо")
+                print("ичо")
+            break
         if (num==x):
             p.alert(text="ура, вы угадали число!", title="победа", button="я гений :)")
             otziv=input("вам понравилась игра?")
-            break
-            if (otziv=="да"):
+            if (otziv==yes):
                 print('я старалась')
-            elif (otziv=="нет"):
-                input("ичо")
+            elif (otziv==no):
+                print("ичо")
+            break
         elif (num>x):
             print("число меньше")
         elif (num<x):
             print("число больше")
 elif (YesOrNo=="нет"):
-    print("ну ладно, увидимся позже...")
+    p.alert(text="ну ладно, увидимся позже...", title="пока", button="хочу играть")
+    YesOrNo=input('хотите начать игру?: ')
+    from random import randint
+    x=randint(1, 100)
+    popitki=0
+    print("угадай число от 1 до 100 :)")
+    while True:
+        num=int(input("ваше число: "))
+        popitki=popitki+1
+        if (popitki>=9):
+            p.alert(text="вы проиграли :(!", title="поражение", button="о нет :(")
+            otziv=input("вам понравилась игра?")
+            if (otziv==yes):
+                print('я старалась')
+            elif (otziv==no):
+                print("ичо")
+            break
+        if (num==x):
+            p.alert(text="ура, вы угадали число!", title="победа", button="я гений :)")
+            otziv=input("вам понравилась игра?")
+            if (otziv=="да"):
+                print('я старалась')
+            elif (otziv=="нет"):
+                print("ичо")
+            break
+        elif (num>x):
+            print("число меньше")
+        elif (num<x):
+            print("число больше")
 else:
     p.alert(text="неизвестная команда", button="попробовать снова")
+    YesOrNo=input('хотите начать игру?: ')
+    from random import randint
+    x=randint(1, 100)
+    popitki=0
+    print("угадай число от 1 до 100 :)")
+    while True:
+        num=int(input("ваше число: "))
+        popitki=popitki+1
+        if (popitki>=9):
+            p.alert(text="вы проиграли :(!", title="поражение", button="о нет :(")
+            otziv=input("вам понравилась игра?")
+            if (otziv==yes):
+                print('я старалась')
+            elif (otziv==no):
+                print("ичо")
+            break
+        if (num==x):
+            p.alert(text="ура, вы угадали число!", title="победа", button="я гений :)")
+            otziv=input("вам понравилась игра?")
+            if (otziv=="да"):
+                print('я старалась')
+            elif (otziv=="нет"):
+                print("ичо")
+            break
+        elif (num>x):
+            print("число меньше")
+        elif (num<x):
+            print("число больше")
