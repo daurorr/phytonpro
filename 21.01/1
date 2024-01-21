@@ -1,0 +1,7 @@
+n=int(input("сколько: "))
+sum=0
+for step in range(n):
+    g=int(input("числа"))
+    sum=sum+g
+print(sum)
+    
