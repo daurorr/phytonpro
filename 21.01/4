@@ -1,0 +1,9 @@
+import pyautogui as p
+n=int(input("сколько вкладок: "))
+p.moveTo(82, 754)
+p.click()
+for step in range(n):
+    p.moveTo(380, 20)
+    p.click(button="right")
+    p.moveTo(385, 35)
+    p.click()
