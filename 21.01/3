@@ -1,0 +1,6 @@
+n=int(input("до: "))
+sum=1
+for step in range(int(1), n+1):
+    sum=sum*step
+print(sum)
+    
