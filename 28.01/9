@@ -1,0 +1,9 @@
+n=int(input("сколько: "))
+o=0
+p=0
+for step in range(int(1), n+1):
+    o=int(input())
+    if (o==0):
+        p=p+1
+print(p)
+    
