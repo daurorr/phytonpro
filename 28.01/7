@@ -1,0 +1,11 @@
+n=int(input("1: "))
+m=int(input("2: "))
+l=int(input("3: "))
+p=0
+for step in range(n, m, l):
+    print(step)
+    p=p+1
+if (p==0):
+    print('ничего не получилось')
+
+    
