@@ -1,0 +1,5 @@
+n=int(input("сколько: "))
+sum=0
+for step in range(n):
+    print("привет")
+    
