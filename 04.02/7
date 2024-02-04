@@ -1,0 +1,10 @@
+n=int(input('сколько: '))
+a=[]
+s=1
+for i in range (0, n):
+    x=int(input())
+    a.append(x)
+    if (a[i]%3!=0):
+        s*=a[i]
+print(s)
+
