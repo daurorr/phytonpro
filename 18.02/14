@@ -1,0 +1,9 @@
+n=int(input('сколько: '))
+a=[]
+for i in range (0, n):
+    x=int(input())
+    a.append(x)
+print(x)
+ 
+
+
