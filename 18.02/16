@@ -1,0 +1,6 @@
+a=[]
+q="* O # % ^ !"
+for i in range (0, 51):
+        a.append(q)
+print(a)
+   
