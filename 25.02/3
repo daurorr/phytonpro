@@ -1,0 +1,13 @@
+a=[[],[],[],[],[]]
+p=0
+q=1
+for i in range (5):
+    for j in range (i, i+6):
+        if (i%2==0):
+            a[i].append(q)
+        else:
+            a[i].append(p)
+for i in range (len(a)):
+    for j in range (len (a)):
+        print(a[i][j], end=' ')
+    print()
