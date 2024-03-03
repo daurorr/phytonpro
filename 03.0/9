@@ -1,0 +1,11 @@
+a=[[],[],[],[],[],[]]
+q=14
+for i in range (6):
+    for j in range (6):
+        a[i].append(q)
+        q+=3
+    q-=17
+for i in range (6):
+    for j in range (6):
+        print(a[i][j], end=' ')
+    print()
