@@ -1,0 +1,11 @@
+a=[[],[],[],[],[],[]]
+q=80
+for i in range (6):
+    for j in range (6):
+        a[i].append(q)
+        q-=4
+    q+=20
+for i in range (6):
+    for j in range (6):
+        print(a[i][j], end=' ')
+    print()
