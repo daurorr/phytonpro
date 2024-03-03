@@ -1,0 +1,8 @@
+a=[[],[],[],[],[]]
+for i in range (5):
+    for j in range (i, i+7):
+        a[i].append(j+10)
+for i in range (5):
+    for j in range (5):
+        print(a[i][j], end=' ')
+    print()
