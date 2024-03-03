@@ -1,0 +1,13 @@
+a=[[],[],[],[],[],[],[],[],[]]
+for i in range (9):
+    for j in range (8):
+        if (i%3==0):
+            a[i].append(3)
+        elif (i%3==2) :
+            a[i].append(5)
+        elif (i%3==1):
+            a[i].append(4)
+for i in range (9):
+    for j in range (0, 8):
+        print(a[i][j], end=' ')
+    print()
