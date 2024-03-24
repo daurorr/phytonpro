@@ -1,0 +1,6 @@
+def f (a, n, x):
+    a.append(n)
+    for i in x:
+        a.append(i)
+    return a
+print(f([], 9, 'abc'))
