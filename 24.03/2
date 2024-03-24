@@ -1,0 +1,8 @@
+def print_fio(name, surname, patronimic):
+    print(surname[0], end='')
+    print(name[0], end='')
+    print(patronimic[0], end='')
+name=input('имя: ')
+surname=input('фамилия: ')
+patronimic=input('отчество: ')
+print_fio(name, surname, patronimic)
