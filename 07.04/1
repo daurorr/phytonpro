@@ -1,0 +1,6 @@
+def f(n):
+    if n==0:
+        return 
+    print(n)
+    return f(n-1)
+f(int(input()))
