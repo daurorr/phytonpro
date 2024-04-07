@@ -1,0 +1,13 @@
+def f(a, b, z):
+    if a==b:
+        print(a)
+        return (a)
+    print(a)
+    return f(a+z, b, z)
+a=int(input())
+b=int(input())
+if a<b:
+    z=1
+if a>b:
+    z=-1
+f(a, b, z)
