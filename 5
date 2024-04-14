@@ -1,0 +1,10 @@
+def yes_no(n):
+    if n==1:
+        print("yes")
+        return None
+    if n%2!=0:
+        print("no")
+        return None
+    else:
+        yes_no(n/2)
+yes_no(int(input()))
