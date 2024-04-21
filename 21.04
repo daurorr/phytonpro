@@ -1,0 +1,87 @@
+print("для начала игры нужно выбрать персонажа")
+print("ознакомьтесь с предложениями:")
+print("1", "эмили", "18 лет", "опрятность=12", "удача=7", "сила=2", "ум=9", "богатство=10", sep="\n")
+print("2", "марк", "16 лет", "опрятность=6", "удача=5", "сила=10", "ум=7", "богатство=12", sep="\n")
+print("3", "алина", "14 лет", "опрятность=15", "удача=5", "сила=1", "ум=4", "богатство=14", sep="\n")
+print("4", "алекса", "12 лет", "опрятность=12", "удача=8", "сила=2", "ум=10", "богатство=8", sep="\n")
+print("5", "итан", "15 лет", "опрятность=9", "удача=7", "сила=10", "ум=10", "богатство=4", sep="\n")
+character=int(input("номер персонажа: "))
+if character==1:
+    age=18
+    neatness=12
+    luck=7
+    power=2
+    cleverness=9
+    richness=10
+    health=10
+if character==2:
+    age=16
+    neatness=6
+    luck=5
+    power=10
+    cleverness=7
+    richness=12
+    health=10
+if character==3:
+    age=14
+    neatness=15
+    luck=5
+    power=1
+    cleverness=4
+    richness=14
+    health=10
+if character==4:
+    age=12
+    neatness=12
+    luck=8
+    power=2
+    cleverness=10
+    richness=8
+    health=10
+if character==5:
+    age=15
+    neatness=9
+    luck=7
+    power=10
+    cleverness=10
+    richness=4
+    health=10
+print("сегодня был обычный понедельник, вы проснулись в 6.30 и пошли умываться.")
+print("вы зашли в ванную комнату, но вдруг вас настигла лень, вы будете чистить зубы? 1=да, 2=нет.")
+otv1=int(input())
+if otv1==1:
+    neatness+=1
+if otv1==2:
+    neatness-=1
+print("вы вышли из ванны и пошли кушать")
+print("что будете кушать?")
+print("1=йогурт", "2=бутерброд", "3=хлопья", "4=ничего", sep="\n")
+otv2=int(input("выбор: "))
+if otv2==1:
+    luck+=1
+if otv2==2:
+    power+=1
+if otv2==3:
+    health+=1
+if otv2==4:
+    health-=1
+print("что будете пить?")
+print("1=чай", "2=кофе", "3=вода", "4=сок", sep="\n")
+otv3=int(input())
+if otv3==1:
+    luck+=1
+if otv3==2:
+    power+=1
+if otv3==3:
+    health-=1
+if otv3==4:
+    health+=1
+print("после завтрака вы решили собраться в школу")
+if character==1 or 3 or 4:
+    print("будете краситься?")
+    print("1=да", "2=нет")
+    otv4=int(input())
+    if otv4==1:
+        neatness+=1
+    if otv4==1:
+        neatness+=0
