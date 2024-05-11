@@ -1,0 +1,26 @@
+import random
+ 
+words=('aaa', 'bbb', 'ccc')
+tries=3 
+word_rnd=random.choice(words) 
+word_mine='*'*len(word_rnd) #представление загад. слова в виде ***
+print('Загаданное слово имеет следующий вид: ', word_mine)
+while (tries!=0) and (word_mine!=word_rnd):
+    new=''
+    guess=input('Введите букву, которая, по вашему мнению находится в слове: ')
+    if guess!='':
+        if guess in word_rnd:
+            for i in range(len(word_rnd)): #цикл заполнения шифрованного word_mine угаданными буквами
+                if guess==word_rnd[i]: 
+                    new+=guess                   
+                else:
+                    new+=word_mine[i]
+            word_mine=new
+            print('\nВерно. Текущий вид слова: ', word_mine)
+        else:
+            tries-=1
+            print('Такой буквы нет, осталось попыток: ', tries)
+ 
+    else:
+        print('Ничего не введено, попробуйте снова')
+        continue
