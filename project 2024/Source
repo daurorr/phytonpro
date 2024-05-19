@@ -1,0 +1,240 @@
+import pyautogui as p
+import random
+print("добро пожаловать, здесь вы можете сыграть в мини-игры")
+while True:
+    print("в какую игру будете играть?", "угадай число", "угадай слово", "камень, ножницы, бумага", "крестики-нолики",  sep="\n")
+    answer=input()
+    if answer=="угадай число":
+        YesOrNo=input('хотите начать игру?: ')
+        yes="да"
+        no="нет"
+        if (YesOrNo=="да"):
+            from random import randint   #рандомное число для угадывания
+            x=randint(1, 100)
+            popitki=0
+            print("угадайте число от 1 до 100 :)")
+            while True: #пока игрок не угадает число/пока не закончатся попытки
+                num=int(input("ваше число: "))
+                popitki=popitki+1
+                if (popitki>=9):
+                    p.alert(text="вы проиграли :(!", title="поражение", button="о нет :(")
+                    break
+                if (num==x):
+                    p.alert(text="ура, вы угадали число!", title="победа", button="я гений :)")
+                    break
+                elif (num>x):
+                    print("число меньше")
+                elif (num<x):
+                    print("число больше")
+        elif (YesOrNo=="нет"):
+            p.alert(text="ну ладно, увидимся позже...", title="пока", button="хочу играть")
+            YesOrNo=input('хотите начать игру?: ')
+            from random import randint
+            x=randint(1, 100)
+            popitki=0
+            print("угадай число от 1 до 100 :)")
+            while True:
+                num=int(input("ваше число: "))
+                popitki=popitki+1
+                if (popitki>=9):
+                    p.alert(text="вы проиграли :(!", title="поражение", button="о нет :(")
+                    break
+                if (num==x):
+                    p.alert(text="ура, вы угадали число!", title="победа", button="я гений :)")
+                    break
+                elif (num>x):
+                    print("число меньше")
+                elif (num<x):
+                    print("число больше")
+        else:
+            p.alert(text="неизвестная команда", button="попробовать снова")
+            YesOrNo=input('хотите начать игру?: ')
+            from random import randint
+            x=randint(1, 100)
+            popitki=0
+            print("угадай число от 1 до 100 :)")
+            while True:
+                num=int(input("ваше число: "))
+                popitki=popitki+1
+                if (popitki>=9):
+                    p.alert(text="вы проиграли :(!", title="поражение", button="о нет :(")
+                    break
+                if (num==x):
+                    p.alert(text="ура, вы угадали число!", title="победа", button="я гений :)")
+                    break
+                elif (num>x):
+                    print("число меньше")
+                elif (num<x):
+                    print("число больше")
+        print('будете играть в другие игры?')
+        qw=input()
+        if qw=='да':
+            print('отлично!')
+        if qw=='нет':
+            print('жаль')
+            print("спасибо за использование данного кода!")
+            break
+       
+                 
+                 
+                 
+                 
+    if answer=="угадай слово":
+        words=('cat', 'house', 'allergy')
+        tries=3 
+        word_rnd=random.choice(words) 
+        word_mine='*'*len(word_rnd) #представление загад. слова в виде ***
+        print('загаданное слово имеет следующий вид: ', word_mine)
+        while (tries!=0) and (word_mine!=word_rnd):
+            new=''
+            guess=input('введите букву, которая, по вашему мнению находится в слове: ')
+            if guess!='':
+                if guess in word_rnd:
+                    for i in range(len(word_rnd)): #цикл заполнения шифрованного word_mine угаданными буквами
+                        if guess==word_rnd[i]: 
+                            new+=guess                   
+                        else:
+                            new+=word_mine[i]
+                    word_mine=new
+                    print('\nверно. текущий вид слова: ', word_mine)
+                else:
+                    tries-=1
+                    print('такой буквы нет, осталось попыток: ', tries)
+            else:
+                print('ничего не введено, попробуйте снова')
+                continue
+        print("вы выйграли!")
+        print('будете играть в другие игры?')
+        qw=input()
+        if qw=='да':
+            print('отлично!')
+        if qw=='нет':
+            print('жаль')
+            print("спасибо за использование данного кода!")
+            break
+
+    
+    
+    
+    
+    
+    if answer=="камень, ножницы, бумага":
+        start = input("вы запустили игру 'камень, ножницы, бумага'. хотите поиграть? (вводите 'да' или 'нет') ")
+        if start == 'да':
+            print("начинаем!")
+            print("3...2...1...")
+            print('если захотите закончить вводите "-".')
+            print('если захотите узнать счёт вводите "счет".')
+            user_ball = 0
+            rand_ball = 0
+            while True:
+                user = input("камень, ножницы или бумага? (вводите камень, ножницы или бумага): ")
+                list_play = ['камень', 'ножницы', 'бумага']
+                if user in list_play:
+                    rand = random.choice(list_play)
+                    print(rand)
+                    if rand == 'камень' and user == 'ножницы':
+                        rand_ball += 1
+                        print("соперник получил балл")
+                    if rand == 'камень' and user == 'бумага':
+                        user_ball += 1
+                        print("вы получили балл")
+                    if rand == 'ножницы' and user == 'камень':
+                        user_ball += 1
+                        print("вы получили балл")
+                    if rand == 'ножницы' and user == 'бумага':
+                        rand_ball += 1
+                        print("соперник получил балл")
+                    if rand == 'бумага' and user == 'ножницы':
+                        user_ball += 1
+                        print("вы получили балл")
+                    if rand == 'бумага' and user == 'камень':
+                        rand_ball += 1
+                        print("соперник получил балл")
+                elif user == 'счет':
+                    print('ваши баллы - ', user_ball, '. баллы вашего соперника - ', rand_ball, ".")
+                elif user == '-':
+                    print('ваши баллы - ', user_ball, '. баллы вашего соперника - ', rand_ball, ".")
+                    print('конец игры! заходите ещё!')
+                    break
+                else:
+                    print("вводите 'камень', 'ножницы' или 'бумага'")
+        if start == 'нет':
+            print('жаль... :(')
+        print('будете играть в другие игры?')
+        qw=input()
+        if qw=='да':
+            print('отлично!')
+        if qw=='нет':
+            print('жаль')
+            print("спасибо за использование данного кода!")
+            break
+        
+    if answer=="крестики-нолики":
+        board = list(range(1, 10)) #список с числами от 1 до 9
+        def draw_board(board):
+            print("-" * 13)
+            for i in range(3):
+                print("|", board[0 + i * 3], "|", board[1 + i * 3], "|", board[2 + i * 3], "|") #рисуется поле
+                print("-" * 13)
+        def take_input(player_token):
+            valid = False
+            while not valid:  #while не закончится пока valid не примет значение True (пока игра не будет закончена)
+                player_answer = input("Куда поставим " + player_token + "? ")
+                try:
+                    player_answer = int(player_answer) #ввод пользователем определённой клетки, в которую будет ставиться крестик, либо нолик
+                except ValueError:
+                    print("Некорректный ввод. Вы уверены, что ввели число?") #если же пользователь ввёл, а какой-либо другой символ, выведется ошибка.
+                    continue
+                if 1 <= player_answer <= 9:
+                    if str(board[player_answer - 1]) not in "XO":
+                        board[player_answer - 1] = player_token
+                        valid = True
+                    else:
+                        print("Эта клетка уже занята!")  #занята ли введённая клетка
+                else:
+                    print("Некорректный ввод. Введите число от 1 до 9.")  #не введено ли число больше или меньшн
+
+
+        def check_win(board):
+            win_coord = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6), (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6)) #варианты выигрышей
+            for each in win_coord:
+                if board[each[0]] == board[each[1]] == board[each[2]]:   #проверка на победу (выиграл ли кто-то или нет)
+                    return board[each[0]]
+            return False
+
+
+        def main(board):
+            counter = 0 #общее количество ходов (не может превышать 9)
+            win = False
+            while not win:
+                draw_board(board) #проверка, кто ходит в данный момент
+                if counter % 2 == 0:
+                    take_input("X") 
+                else:
+                    take_input("O")
+                counter += 1
+
+                tmp = check_win(board)
+                if tmp:
+                    print(tmp, "выиграл!") #выводится если какой-то игрок выиграл
+                    win = True
+                    break
+                if counter == 9:
+                    print("Ничья!") #выводится если все клетки заняты
+                    break
+            draw_board(board)
+
+
+        main(board)
+
+        print('будете играть в другие игры?')
+        qw=input()
+        if qw=='да':
+            print('отлично!')
+        if qw=='нет':
+            print('жаль')
+            print("спасибо за использование данного кода!")
+            break
+
+
